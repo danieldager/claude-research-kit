@@ -1,7 +1,8 @@
 # Installing the research kit
 
 Instructions for Claude Code. The user has asked you to install this kit. Follow these steps
-in order, and do not change anything outside `~/.claude/`.
+in order, and do not change anything outside `~/.claude/`. Use one simple command or file
+edit per step; do not combine steps into one long script.
 
 1. **Skills.** Copy `skills/handoff/SKILL.md` and `skills/orchestrate/SKILL.md` to
    `~/.claude/skills/handoff/SKILL.md` and `~/.claude/skills/orchestrate/SKILL.md`. If a
@@ -14,15 +15,18 @@ in order, and do not change anything outside `~/.claude/`.
 3. **Project log instructions.** Append the contents of `CLAUDE.md` from this kit, from the
    line `## clog/` to the end, to `~/.claude/CLAUDE.md` under a heading `# Project memory`.
    Create the file if it does not exist. Never overwrite or reorder what is already there. If
-   it already contains a `clog/` section, ask the user before adding a second one.
+   it already contains a `clog/` section, show the user how the two differ and ask whether to add the kit's version, replace theirs,
+   or skip this step.
 
 4. **Output style.** In `~/.claude/settings.json`, set `"outputStyle": "Concise"`, keeping
    every other setting. If an output style is already set, ask the user first.
 
-5. **Session-start hook.** Merge the hook in `hook.md` into `~/.claude/settings.json`
-   without removing any existing hooks, and check the file is still valid JSON. It loads the
-   project roadmap and the latest handoff whenever a session starts, resumes, or is cleared
-   or compacted. Tell the user in one sentence that you added it and how to remove it.
+5. **Session-start hook.** Copy `hooks/clog-resume.sh` to `~/.claude/hooks/clog-resume.sh`.
+   Then add the `SessionStart` entry shown in `hook.md` to the `"hooks"` object in
+   `~/.claude/settings.json`, keeping every existing hook, and check the file is still valid
+   JSON. It loads the project roadmap and the latest handoff whenever a session starts,
+   resumes, or is cleared or compacted. Tell the user in one sentence that you added it and
+   how to remove it.
 
 6. **Report.** List every file you created or changed. Then tell the user, in four lines,
    how the kit works from now on:

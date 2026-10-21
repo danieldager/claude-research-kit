@@ -18,7 +18,7 @@ Or copy the files by hand:
 | `skills/handoff/SKILL.md` | `~/.claude/skills/handoff/SKILL.md` |
 | `skills/orchestrate/SKILL.md` | `~/.claude/skills/orchestrate/SKILL.md` |
 | `agents/worker.md`, `agents/labeler.md` | `~/.claude/agents/` |
-| `hook.md` | merge into `~/.claude/settings.json` |
+| `hooks/clog-resume.sh` + `hook.md` | `~/.claude/hooks/`, then merge the entry into `~/.claude/settings.json` |
 
 Also recommended: type `/config` and set the output style to Concise.
 
