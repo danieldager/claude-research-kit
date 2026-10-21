@@ -2,6 +2,7 @@
 name: labeler
 description: Labels the items in one batch file with a fixed codebook and writes one JSON line per item. Use for classifying text (articles, filings, survey answers, postings) in batches of 50 to 100 items.
 model: haiku
+effort: low
 tools: Read, Write
 ---
 
