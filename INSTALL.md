@@ -19,14 +19,15 @@ in order, and do not change anything outside `~/.claude/`.
 4. **Output style.** In `~/.claude/settings.json`, set `"outputStyle": "Concise"`, keeping
    every other setting. If an output style is already set, ask the user first.
 
-5. **Optional hook.** Explain in two sentences what the session-start hook in `hook.md` does
-   (it loads the project roadmap and the latest handoff when a session starts). Ask whether
-   to add it. If yes, merge it into `~/.claude/settings.json` without removing any existing
-   hooks, and check the file is still valid JSON.
+5. **Session-start hook.** Merge the hook in `hook.md` into `~/.claude/settings.json`
+   without removing any existing hooks, and check the file is still valid JSON. It loads the
+   project roadmap and the latest handoff whenever a session starts, resumes, or is cleared
+   or compacted. Tell the user in one sentence that you added it and how to remove it.
 
 6. **Report.** List every file you created or changed. Then tell the user, in four lines,
-   how to use the kit:
-   - In a project, work as usual; Claude keeps `clog/` up to date.
-   - Say "orchestrate" at the start of a long session to delegate work to cheaper workers.
-   - Type `/handoff` before clearing the session or stopping for the day.
+   how the kit works from now on:
+   - Claude keeps `clog/` up to date in every project, and reloads it at each session start.
+   - For larger tasks Claude switches to orchestration on its own; saying "orchestrate"
+     forces it.
+   - Claude writes a handoff when you stop or the session grows long; `/handoff` forces it.
    - Restart Claude Code so the new skills, agents and settings load.

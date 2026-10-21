@@ -18,15 +18,16 @@ Or copy the files by hand:
 | `skills/handoff/SKILL.md` | `~/.claude/skills/handoff/SKILL.md` |
 | `skills/orchestrate/SKILL.md` | `~/.claude/skills/orchestrate/SKILL.md` |
 | `agents/worker.md`, `agents/labeler.md` | `~/.claude/agents/` |
-| `hook.md` (optional) | merge into `~/.claude/settings.json` |
+| `hook.md` | merge into `~/.claude/settings.json` |
 
 Also recommended: type `/config` and set the output style to Concise.
 
 ## Use
 
-- Work as usual in a project; Claude keeps `clog/ROADMAP.md` and a dated daily log.
-- Say "orchestrate" at the start of a long session.
-- Type `/handoff` before `/clear`, `/compact`, or stopping for the day.
+Nothing to do after installing. Claude keeps `clog/ROADMAP.md` and a dated daily log in each
+project, reloads them at every session start, switches to orchestration for larger tasks,
+and writes a handoff when you stop or the session grows long. Say "orchestrate" or type
+`/handoff` to force either.
 
 ## Cautions
 

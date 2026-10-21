@@ -30,3 +30,12 @@ ROADMAP is where we are going; the daily log is what happened. Run `/handoff` be
 
 At the start of a session, read `clog/ROADMAP.md` and the most recent `## HH:MM — HANDOFF`
 block in `clog/`. Ask before re-deriving anything the clog says was already settled.
+
+## Without being asked
+
+- **Handoff.** Write a handoff (the `handoff` skill) when I say I am stopping or taking a
+  break, before you suggest `/clear` or `/compact`, when the conversation has grown long,
+  and after a major result or decision. Do not wait for me to type `/handoff`.
+- **Orchestration.** When a task will need reading many files or documents, several
+  independent steps, or work that can run in parallel, load the `orchestrate` skill and
+  work in that mode. For short, linear tasks, work directly in this session.
