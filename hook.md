@@ -1,7 +1,7 @@
 # Load the clog automatically at session start
 
 Add this to `~/.claude/settings.json` (merge with any existing `"hooks"` key). Whenever a session starts, resumes, or is cleared or compacted,
-every session it prints the roadmap and the live handoff block, wherever it is in `clog/`; Claude
+it prints the roadmap and the live handoff block, wherever it is in `clog/`; Claude
 Code adds that output to the session's context. In folders without `clog/` it prints nothing.
 
 ```json
